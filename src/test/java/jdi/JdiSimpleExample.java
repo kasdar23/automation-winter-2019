@@ -1,16 +1,14 @@
-package jdi.lesson1;
+package jdi;
 
-import base.jdi.lesson1.JDISite;
-import base.jdi.lesson1.pages.IndexPageJdi;
+import base.jdi.JDISite;
+import base.jdi.entities.User;
 import com.epam.jdi.light.driver.WebDriverFactory;
 import com.epam.jdi.light.ui.html.PageFactory;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import static java.lang.System.setProperty;
+import static base.jdi.entities.User.*;
 
 public class JdiSimpleExample {
 
@@ -29,7 +27,7 @@ public class JdiSimpleExample {
     @Test
     public void simpleJdiTest() {
         JDISite.indexPageJdi.open();
-        JDISite.indexPageJdi.login("epam", "1234");
+        JDISite.indexPageJdi.login(PETER);
 //        indexPageJdi.login("epam", "1234");
     }
 
